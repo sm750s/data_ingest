@@ -1,9 +1,9 @@
 # Sqoop Exercise
 
-1. From the accounts table, import only the primary key, along with the first name, last name to
-HDFS directory /loudacre/accounts/user_info. Please save the file in text format with tab
-delimiters.
+1. From the accounts table, import only the primary key, along with the first name, last name to HDFS directory /loudacre/accounts/user_info. Please save the file in text format with tab delimiters.
+
   **Hint**: You will have to figure out what the name of the table columns are in order to complete this exercise.
+
   A. Look up table `accounts` and find out primary key, first name and last name columns.
   ```
   [training@localhost ~]$ sqoop eval --connect jdbc:mysql://localhost/loudacre --username training --password training --query "DESCRIBE accounts"
@@ -116,9 +116,7 @@ Note: Recompile with -Xlint:deprecation for details.
 
   ```
 
-2. This time save the same in parquet format with snappy compression. Save it in
-/loudacre/accounts/user_compressed. Provide.a screenshot of HUE with the new directory
-created.
+2. This time save the same in parquet format with snappy compression. Save it in /loudacre/accounts/user_compressed. Provide.a screenshot of HUE with the new directory created.
   ```
   [training@localhost ~]$ sqoop import \
 > --table accounts \
