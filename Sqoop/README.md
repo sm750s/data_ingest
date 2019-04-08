@@ -207,8 +207,7 @@ Note: Recompile with -Xlint:deprecation for details.
 3. Finally save in /loudacre/accounts/CA only clients whose state is from California. Save the file in avro format and compressed using snappy. From the terminal, display some of the records that you just imported. Take a screenshot and save it as CA_only.
 
   A. Import data to HDFS directory /loudacre/accounts/CA
-
-    ```
+  ```
   [training@localhost ~]$ sqoop import \
 > --table accounts \
 > --connect jdbc:mysql://localhost/loudacre \
@@ -293,11 +292,11 @@ Note: Recompile with -Xlint:deprecation for details.
 		Bytes Written=1350990
 19/04/07 22:31:39 INFO mapreduce.ImportJobBase: Transferred 1.2884 MB in 34.3251 seconds (38.4362 KB/sec)
 19/04/07 22:31:39 INFO mapreduce.ImportJobBase: Retrieved 92416 records.
-    ```
+  ```
 
-    B. Display imported data by avro-tools.
-    ```
-    [training@localhost ~]$ avro-tools tojson hdfs://localhost/loudacre/accounts/CA/part-m-00000.avro | head 3
+  B. Display imported data by avro-tools.
+  ```
+  [training@localhost ~]$ avro-tools tojson hdfs://localhost/loudacre/accounts/CA/part-m-00000.avro | head 3
 head: cannot open `3' for reading: No such file or directory
 log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
 log4j:WARN Please initialize the log4j system properly.
@@ -320,5 +319,5 @@ log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more in
 {"acct_num":{"int":12},"first_name":{"string":"Marcia"},"last_name":{"string":"Roberts"}}
 {"acct_num":{"int":13},"first_name":{"string":"Andres"},"last_name":{"string":"Cruse"}}
 {"acct_num":{"int":14},"first_name":{"string":"Ann"},"last_name":{"string":"Moore"}}
-    ```
-    ![Image of Sqoop Exercise 2](CA_only.png)
+  ```
+  ![Image of Sqoop Exercise 2](CA_only.png)
