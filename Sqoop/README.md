@@ -325,4 +325,6 @@ Note: Recompile with -Xlint:deprecation for details.
   g":1395174587000},"modified":{"long":1395174587000}}
   ```
   ![Image of Sqoop Exercise 2 - Terminal Logs](CA_only.png)
+
+  C. Explorer the folder with HUE
   ![Image of Sqoop Exercise 2 - File Browser in HUE](CA_only_from_HUE.png)
