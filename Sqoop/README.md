@@ -314,4 +314,5 @@ log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more in
 {"acct_num":{"int":13},"first_name":{"string":"Andres"},"last_name":{"string":"Cruse"}}
 {"acct_num":{"int":14},"first_name":{"string":"Ann"},"last_name":{"string":"Moore"}}
   ```
-  ![Image of Sqoop Exercise 2](CA_only.png)
+  ![Image of Sqoop Exercise 2 - Terminal Logs](CA_only.png)
+  ![Image of Sqoop Exercise 2 - File Browser in HUE](CA_only_from_HUE.png)
