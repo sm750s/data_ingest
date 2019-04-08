@@ -1,6 +1,6 @@
 # Sqoop Exercise
 
-1. From the accounts table, import only the primary key, along with the first name, last name to HDFS directory /loudacre/accounts/user_info. Please save the file in text format with tab delimiters.
+#### 1. From the accounts table, import only the primary key, along with the first name, last name to HDFS directory /loudacre/accounts/user_info. Please save the file in text format with tab delimiters.
 
   **Hint**: You will have to figure out what the name of the table columns are in order to complete this exercise.
 
@@ -116,7 +116,7 @@ Note: Recompile with -Xlint:deprecation for details.
 
   ```
 
-2. This time save the same in parquet format with snappy compression. Save it in /loudacre/accounts/user_compressed. Provide.a screenshot of HUE with the new directory created.
+#### 2. This time save the same in parquet format with snappy compression. Save it in /loudacre/accounts/user_compressed. Provide.a screenshot of HUE with the new directory created.
   ```
   [training@localhost ~]$ sqoop import \
 > --table accounts \
@@ -204,7 +204,7 @@ Note: Recompile with -Xlint:deprecation for details.
   ```
   ![Image of Sqoop Exercise 2](sqoop-exercise-2-1.png)
 
-3. Finally save in /loudacre/accounts/CA only clients whose state is from California. Save the file in avro format and compressed using snappy. From the terminal, display some of the records that you just imported. Take a screenshot and save it as CA_only.
+#### 3. Finally save in /loudacre/accounts/CA only clients whose state is from California. Save the file in avro format and compressed using snappy. From the terminal, display some of the records that you just imported. Take a screenshot and save it as CA_only.
 
   A. Import data to HDFS directory /loudacre/accounts/CA
   ```
