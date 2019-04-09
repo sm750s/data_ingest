@@ -2,6 +2,9 @@
 
 ### 1. Create a new flume configuration file with the following
 ```
+[training@localhost ~]$ vi ~/flume-netcat-to-logger.conf
+```
+```
 # flume-netcat-to-logger.conf: Flume GITHUB
 
 # Name the components on this agent
