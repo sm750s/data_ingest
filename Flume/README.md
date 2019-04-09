@@ -24,13 +24,13 @@ agent1.channels.memory-channel.type = memory
 agent1.channels.memory-channel.capacity = 1000
 agent1.channels.memory-channel.transactionCapacity = 100
 ```
-![Image of Flume Exercise 1](flume-exercise-1-1.png)
+![Image of Flume Exercise 1](flume-exercise-1-1.PNG)
 
 ### 2. Start the agent.
 ```
 [training@localhost ~]$ flume-ng agent --conf /etc/flume-ng/conf --conf-file ~/flume-netcat-to-logger.conf --name agent1 -Dflume.root.logger=INFO,console
 ```
-![Image of Flume Exercise 2](flume-exercise-2-1.png)
+![Image of Flume Exercise 2](flume-exercise-2-1.PNG)
 
 ### 3. From another terminal start telnet and connect to port 4444. Start typing and you should see the results from the other terminal. Provide a screenshot of your results.
 ```
@@ -43,6 +43,6 @@ OK
 Did you receive my message?
 OK
 ```
-![Image of Flume Exercise 3 - Connect with telnet and type message](flume-exercise-3-1.png)
+![Image of Flume Exercise 3 - Connect with telnet and type message](flume-exercise-3-1.PNG)
 
-![Image of Flume Exercise 3 - Flume Logger Sink](flume-exercise-3-2.png)
+![Image of Flume Exercise 3 - Flume Logger Sink](flume-exercise-3-2.PNG)
