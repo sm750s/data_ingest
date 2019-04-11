@@ -74,3 +74,4 @@ SELECT order_date_ymd
        ) tmp
  ORDER BY order_date_ymd;
 ```
+![Image of Hive Exercise 4](hive-exercise-4-1.png)
