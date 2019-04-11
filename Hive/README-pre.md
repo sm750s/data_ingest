@@ -7,7 +7,7 @@ SELECT *
  WHERE fname LIKE 'Bridget%'
    AND city = 'Kansas City'
 ```
-![Image of Hive Exercise 1](hive-exercise-1-1.png)
+![Image of Hive Pre Exercise 1](hive-pre-exercise-1-1.png)
 
 ### 2. Execute a query that displays the three most expensive products.
 ```
