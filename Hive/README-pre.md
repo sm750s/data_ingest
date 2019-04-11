@@ -1,4 +1,4 @@
-## Hive Exercise
+## Hive Pre Exercise
 
 ### 1. Which customer did your query identify as the winner of the $5,000 prize?
 ```
