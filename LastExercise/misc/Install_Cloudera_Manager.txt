@@ -1,4 +1,4 @@
--- 0. SSH Key (ALL)
+﻿-- 0. SSH Key (ALL)
 -- PuttyGen -> Load private key -> Conversions > Export OpenSSH Key
 -- Create a new file '~/.ssh/id_rsa' with the contents of just exported OpenSSH Key
 
@@ -50,7 +50,7 @@ $ sudo /usr/bin/mysql_secure_installation
 
 -- 8. Install MySQL JDBC Driver (CM)
 -- 8.1 Install from CM
-$ sudo wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.46.tar.gz ~/mysql-connector-java-5.1.46.tar.gz
+$ sudo wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.46.tar.gz ~/
 $ tar xvfz ~/mysql-connector-java-5.1.46.tar.gz
 $ sudo mkdir -p /usr/share/java
 $ sudo cp ~/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar /usr/share/java/mysql-connector-java.jar
@@ -70,13 +70,13 @@ $ ssh centos7-w3 "sudo mkdir -p /usr/share/java; sudo mv ~/mysql-connector-java.
 -- 9. Create Database User
 $ mysql -u root -p
 
-CREATE DATABASE scm DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON scm.* TO 'scm-user'@'%' IDENTIFIED BY 'training';
-CREATE DATABASE amon DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON amon.* TO 'amon-user'@'%' IDENTIFIED BY 'training';
-CREATE DATABASE rmon DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON rmon.* TO 'rmon-user'@'%' IDENTIFIED BY 'training';
-CREATE DATABASE hue DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON hue.* TO 'hue-user'@'%' IDENTIFIED BY 'training';
-CREATE DATABASE metastore DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON metastore.* TO 'metastore-user'@'%' IDENTIFIED BY 'training';
-CREATE DATABASE sentry DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON sentry.* TO 'sentry-user'@'%' IDENTIFIED BY 'training';
-CREATE DATABASE oozie DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON oozie.* TO 'oozie-user'@'%' IDENTIFIED BY 'training';
+CREATE DATABASE scm DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON scm.* TO 'scm'@'%' IDENTIFIED BY 'training';
+CREATE DATABASE amon DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON amon.* TO 'amon'@'%' IDENTIFIED BY 'training';
+CREATE DATABASE rmon DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON rmon.* TO 'rmon'@'%' IDENTIFIED BY 'training';
+CREATE DATABASE hue DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON hue.* TO 'hue'@'%' IDENTIFIED BY 'training';
+CREATE DATABASE metastore DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON metastore.* TO 'metastore'@'%' IDENTIFIED BY 'training';
+CREATE DATABASE sentry DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON sentry.* TO 'sentry'@'%' IDENTIFIED BY 'training';
+CREATE DATABASE oozie DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON oozie.* TO 'oozie'@'%' IDENTIFIED BY 'training';
 
 FLUSH PRIVILEGES;
 SHOW DATABASES;
@@ -84,7 +84,7 @@ EXIT;
 
 
 -- 10. Setup CM Database
-$ sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql scm scm-user training
+$ sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql scm scm training
 $ sudo systemctl start cloudera-scm-server
 
 
@@ -98,6 +98,8 @@ centos7-m1
 centos7-w1
 centos7-w2
 centos7-w3
+
+https://www.alibabacloud.com/blog/how-to-setup-mariadb-master-and-slave-replication-on-ubuntu-16-04_594098
 
 -- 11.2 Settings
 Check All Java Related Installs
