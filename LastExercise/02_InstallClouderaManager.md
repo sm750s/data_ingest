@@ -131,3 +131,17 @@ Password:
 %wheel  ALL=(ALL)       NOPASSWD: ALL
 
 ```
+
+
+### Cloudera Manager Install Lab
+#### Path B install using CM 5.15.x
+[The full rundown](https://www.cloudera.com/documentation/enterprise/5-15-x/topics/install_cm_cdh.html) is here. You will have to modify your package repo to get the right release. The default repo download always points to the latest version.
+
+Use the documentation to complete the following objectives:
+
+  - Install a supported Oracle JDK on your first node
+  - Install a supported JDBC connector on all nodes
+  - Create the databases and access grants you will need
+  - Configure Cloudera Manager to connect to the database
+  - Start your Cloudera Manager server -- debug as necessary
+  - Do not continue until you can browse your CM instance at port 7180
