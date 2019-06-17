@@ -1,0 +1,27 @@
+* Kafka 설치는 아래 Link의 Installing or Ugrading Kafka from a Parcel 내용을 참조하여 진행
+=> https://www.cloudera.com/documentation/kafka/2-2-x/topics/kafka_installing.html#concept_m2t_d45_4r
+
+
+1. Parcels 목록에 Kafka 추가 및 Node에 배포
+- Parcel: Cloudera Manager 에서 설치할 수 있는 프로그램 배포판을 의미
+=> https://www.cloudera.com/documentation/enterprise/5-7-x/topics/cm_ig_parcels.html#cmug_topic_7_11
+- Kafka는 기본으로 추가되어있는 Parcel인 CDH 에 포함되어 있지 않기 때문에 따로 추가를 해주어야 함
+
+2. 실행하는 Cloudera Manager 환경에서 설치 가능한 Kafka Parcel 경로 확인
+- Cloudera Manager 5.9.x 에서 설치 가능한 Kafka 버전은 2.2.x 임
+=> https://www.cloudera.com/documentation/enterprise/release-notes/topics/rn_consolidated_pcm.html#pcm_kafka
+- Kafka 2.2.x의 Parcel 위치 확인 (Parcel Repository 의 Link)
+=> https://www.cloudera.com/documentation/kafka/latest/topics/kafka_packaging.html#concept_fzg_phl_br
+
+3. Cloudera Manager 의 Parcels 메뉴에서 Kafka 2.2.x의 Parcel 추가 및 각 Node로 배포
+- Pacel 경로 추가 > Download > Distribute > Activate 순으로 진행
+=> https://www.cloudera.com/documentation/enterprise/5-9-x/topics/cm_ig_parcels.html#concept_vwq_421_yk
+
+4. Cluser의 서비스에 Kafka 설치
+- Add a Service 를 사용하여 Kafka를 설치 
+=> https://www.cloudera.com/documentation/enterprise/5-9-x/topics/cm_mc_add_service.html#cmug_topic_5_1
+- *** 이 때 설치 후 실행 시점에 오류가 발생함 (Out of Memory)
+- 설치를 일단 끝내고 Kafka > Configuration에서 Memory 값을 늘림
+=> https://community.cloudera.com/t5/ratings/ratingdetailpage/message-uid/40959/rating-system/forum_solution_metoo#userlist
+
+
