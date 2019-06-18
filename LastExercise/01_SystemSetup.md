@@ -19,7 +19,7 @@ $ sudo passwd training
 ```
 ![Image of System Configuration 000-001](screenshots/system-config-000-001.png)
 
-  - Set **NOPASSWD** option for the group '**wheel**' when **_sudo_**
+  - Set **NOPASSWD** option for the group '**wheel**'
 ```Bash
 $ sudo visudo
 $ sudo cat /etc/sudoers | grep wheel
