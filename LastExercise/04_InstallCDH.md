@@ -24,7 +24,7 @@ Adhere to the following requirements while creating your cluster:
 5. Check the installation steps on each nodes
 ![Image of Install CDH 004](screenshots/install-cdh-004.png)
 
-6. Set roles on each nodes
+6. Set roles on each nodes [(Reference Link)](https://www.cloudera.com/documentation/enterprise/5-8-x/topics/cm_ig_host_allocations.html)
 ![Image of Install CDH 005](screenshots/install-cdh-005.png)
 
 7. Check roles on each nodes
