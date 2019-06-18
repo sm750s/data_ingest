@@ -41,3 +41,6 @@ Adhere to the following requirements while creating your cluster:
 
 11. Final message of cluster installation
 ![Image of Install CDH 010](screenshots/install-cdh-010.png)
+
+12. Cloudera Manager main page
+![Image of Install CDH 011](screenshots/install-cdh-011.png)
