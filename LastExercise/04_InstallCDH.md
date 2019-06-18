@@ -19,7 +19,7 @@ Adhere to the following requirements while creating your cluster:
 ![Image of Install CDH 003](screenshots/install-cdh-003.png)
 
 4. Put account information for agent installation
-> TODO: take a screenshot
+![Image of Install CDH 012](screenshots/install-cdh-012.png)
 
 5. Check the installation steps on each nodes
 ![Image of Install CDH 004](screenshots/install-cdh-004.png)
