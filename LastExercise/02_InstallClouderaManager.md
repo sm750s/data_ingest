@@ -28,16 +28,21 @@ $ ssh w2 "sudo mkdir -p /usr/share/java; sudo mv ~/mysql-connector-java.jar /usr
 $ ssh w3 "sudo mkdir -p /usr/share/java; sudo mv ~/mysql-connector-java.jar /usr/share/java/"
 ```
   - **Create the databases and access grants you will need**
-  1. Install **MariaDB** and run **/usr/bin/mysql_secure_installation** for security
+  1. Install **MariaDB**
 ```
 $ sudo yum install mariadb-server
-$ sudo vi /etc/my.cnf
+```
+  2. Enable and run MariaDB
+```
 $ sudo systemctl enable mariadb
 Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
 $ sudo systemctl start mariadb
+```
+  3. Run **/usr/bin/mysql_secure_installation** for security
+```
 $ sudo /usr/bin/mysql_secure_installation
 ```
-  2. Create Databases and users for Cloudera manager and eco systems
+  4. Create Databases and users for Cloudera manager and eco systems
 ```Bash
 $ mysql -u root -p
 CREATE DATABASE scm DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci; GRANT ALL ON scm.* TO 'scm'@'%' IDENTIFIED BY 'training';
