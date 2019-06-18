@@ -43,7 +43,7 @@ $ cat .ssh/authorized_keys
 ```
 ![Image of System Configuration 000-004](screenshots/system-config-000-004.png)
 
-  - Append the private key to '~training/.ssh/id_rsa'
+  - Append **OpenSSH formatted** private key to '~training/.ssh/id_rsa'
 ```Bash
 $ vi .ssh/id_rsa
 $ chmod 600 .ssh/id_rsa
