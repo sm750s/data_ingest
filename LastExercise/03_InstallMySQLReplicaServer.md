@@ -9,13 +9,10 @@ Choose one of these plans to follow:
   1. Download and implement the official MySQL repo
     - Enable the repo to install MySQL 5.5
       - Skip this step as MariaDB is already registerd in CENTOS7 repo
-
     - Install the mysql package on all nodes
       - Skip this step as MariaDB is already registerd in CENTOS7 repo
-
     - Install mysql-server on the server and replica nodes
       - Do this on a replica server only as MariadDB has already installed in the master server at the _[Install Cloudera Manager](02_InstallClouderaManager.md) Step_
-
     1. Install MariaDB
 ```
 $ sudo yum install -y mariadb-server
