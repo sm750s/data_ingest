@@ -86,6 +86,8 @@ UUID=f41e390f-835b-4223-a9bb-9b45984ddf8d /                       xfs     defaul
 ![Image of System Configuration 004](screenshots/system-config-004.png)
 
   4. Disable transparent hugepage support
+  - Check [disable-transparent-hugepages](files/disable-transparent-hugepages)
+  - Check [tuned.conf](files/tuned.conf)
 ```Bash
 $ sudo vi /etc/init.d/disable-transparent-hugepages
 $ sudo chmod 755 /etc/init.d/disable-transparent-hugepages
@@ -94,9 +96,11 @@ $ sudo mkdir /etc/tuned/no-thp
 $ sudo vi /etc/tuned/no-thp/tuned.conf
 $ sudo tuned-adm profile no-thp
 ```
-![Image of System Configuration 006-001](screenshots/system-config-006-001.png)
+![Image of System Configuration 006-002](screenshots/system-config-006-002.png)
 ```Bash
 $ cat /sys/kernel/mm/transparent_hugepage/enabled
+always madvise [never]
+$ cat /sys/kernel/mm/transparent_hugepage/defrag
 always madvise [never]
 ```
 ![Image of System Configuration 007](screenshots/system-config-007.png)
