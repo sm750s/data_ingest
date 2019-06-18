@@ -11,7 +11,6 @@ Choose one of these plans to follow:
     - Install the mysql package on all nodes
     - Install mysql-server on the server and replica nodes
       - Do this on a replica server only as MariadDB has already installed in the master server at the _[Install Cloudera Manager](02_InstallClouderaManager.md) Step_
-
       - Install MariaDB
 ```
 $ sudo yum install -y mariadb-server
@@ -29,9 +28,8 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service
 $ sudo /usr/bin/mysql_secure_installation
 ```
 ![Image of MariaDB replication 006](screenshots/mariadb-replica-006.png)
-
     - Download and copy the JDBC connector to all nodes.
-    > _Check **Install a supported JDBC connector on all nodes** in [Install Cloudera Manager](02_InstallClouderaManager.md) Step_
+      - _Check **Install a supported JDBC connector on all nodes** in [Install Cloudera Manager](02_InstallClouderaManager.md) Step_
 
   2. You should not need to build a /etc/my.cnf file to start your MySQL server
     - You will have to modify it to support replication. Check MySQL documentation.
