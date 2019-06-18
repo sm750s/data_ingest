@@ -7,7 +7,7 @@ You only need to show this work for one of the instances, but you will run into 
   0. Prerequisite on all nodes
   - Run **_yum update_** and install **wget**
 ```
-$ sudo yum update
+$ sudo yum update -y
 $ sudo yum install -y wget
 ```
 ![Image of System Configuration 000-006](screenshots/system-config-000-006.png)
@@ -63,7 +63,7 @@ $ cat /proc/sys/vm/swappiness
 ```
 ![Image of System Configuration 001](screenshots/system-config-001.png)
 ```Bash
-$ sudo vi /etc/sysctl.conf
+$ echo vm.swappiness = 1 | sudo tee -a /etc/sysctl.conf
 $ cat /etc/sysctl.conf
 (중략)
 vm.swappiness = 1
@@ -133,7 +133,8 @@ $ sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 ```
 ![Image of System Configuration 010](screenshots/system-config-010.png)
 ```Bash
-$ sudo vi /etc/sysctl.conf
+$ echo net.ipv6.conf.all.disable_ipv6 = 1 | sudo tee -a /etc/sysctl.conf
+$ echo net.ipv6.conf.default.disable_ipv6 = 1 | sudo tee -a /etc/sysctl.conf
 $ cat /etc/sysctl.conf | grep net.ipv6
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
@@ -151,7 +152,7 @@ $ getent hosts 172.31.2.32
 ```Bash
 $ sudo systemctl status nscd
 Unit nscd.service could not be found.
-$ sudo yum install nscd
+$ sudo yum install -y nscd
 $ sudo systemctl start nscd
 $ sudo systemctl status nscd
 $ sudo systemctl enable nscd
@@ -163,7 +164,7 @@ $ sudo systemctl enable nscd
 ```Bash
 $ sudo systemctl status ntp
 Unit ntp.service could not be found.
-$ sudo yum install ntp
+$ sudo yum install -y ntp
 $ sudo systemctl start ntpd
 $ sudo systemctl status ntpd
 $ sudo systemctl disable chronyd
