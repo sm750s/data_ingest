@@ -4,12 +4,11 @@
 
 Use the documentation to complete the following objectives:
 
-  -- Import Cloudera manager repository on **_cm1_** and install **cloudera-manager-daemons** **cloudera-manager-server**
-```
+  - Import Cloudera manager repository on **_cm1_**
+```Bash
 $ sudo wget https://archive.cloudera.com/cm5/redhat/7/x86_64/cm/cloudera-manager.repo -P /etc/yum.repos.d/
 $ sudo sed -i 's/x86_64\/cm\/5/x86_64\/cm\/5.15.2/g' /etc/yum.repos.d/cloudera-manager.repo
 $ sudo rpm --import https://archive.cloudera.com/cm5/redhat/7/x86_64/cm/RPM-GPG-KEY-cloudera
-$ sudo yum install -y cloudera-manager-daemons cloudera-manager-server
 ```
 
   - **Install a supported Oracle JDK on your first node**
@@ -64,7 +63,11 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
   - **Configure Cloudera Manager to connect to the database**
-  1. Run initialize script for SCM
+  1. Install **cloudera-manager-daemons** **cloudera-manager-server**
+```Bash
+$ sudo yum install -y cloudera-manager-daemons cloudera-manager-server
+```
+  2. Run initialize script for SCM
 ```Bash
 $ sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql scm scm training
 JAVA_HOME=/usr/java/jdk1.7.0_67-cloudera
