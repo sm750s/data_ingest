@@ -31,8 +31,9 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service
 $ sudo /usr/bin/mysql_secure_installation
 ```
 ![Image of MariaDB replication 006](screenshots/mariadb-replica-006.png)
-    - Download and copy the JDBC connector to all nodes.
-      - _Check **Install a supported JDBC connector on all nodes** in [Install Cloudera Manager](02_InstallClouderaManager.md) Step_
+
+  - Download and copy the JDBC connector to all nodes.
+    - _Check **Install a supported JDBC connector on all nodes** in [Install Cloudera Manager](02_InstallClouderaManager.md) Step_
 
 #### 2. You should not need to build a /etc/my.cnf file to start your MySQL server
   - You will have to modify it to support replication. Check MySQL documentation.
