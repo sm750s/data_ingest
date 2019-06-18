@@ -13,21 +13,20 @@ Choose one of these plans to follow:
       - Skip this step as MariaDB is already registerd in CENTOS7 repo
     - Install mysql-server on the server and replica nodes
       - Do this on a replica server only as MariadDB has already installed in the master server at the _[Install Cloudera Manager](02_InstallClouderaManager.md) Step_
-    1. Install MariaDB
+
+      - Install MariaDB
 ```
 $ sudo yum install -y mariadb-server
 ```
 ![Image of MariaDB replication 004](screenshots/mariadb-replica-004.png)
-
-    2. Enable and run MariaDB
+      - Enable and run MariaDB
 ```
 $ sudo systemctl start mariadb
 $ sudo systemctl enable mariadb
 Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
 ```
 ![Image of MariaDB replication 005](screenshots/mariadb-replica-005.png)
-
-    3. Run **/usr/bin/mysql_secure_installation** for security
+      - Run **/usr/bin/mysql_secure_installation** for security
 ```
 $ sudo /usr/bin/mysql_secure_installation
 ```
