@@ -96,14 +96,14 @@ $ sudo mkdir /etc/tuned/no-thp
 $ sudo vi /etc/tuned/no-thp/tuned.conf
 $ sudo tuned-adm profile no-thp
 ```
-![Image of System Configuration 006-002](screenshots/system-config-006-002.png)
+![Image of System Configuration 006-001](screenshots/system-config-006-001.png)
 ```Bash
 $ cat /sys/kernel/mm/transparent_hugepage/enabled
 always madvise [never]
 $ cat /sys/kernel/mm/transparent_hugepage/defrag
 always madvise [never]
 ```
-![Image of System Configuration 007](screenshots/system-config-007.png)
+![Image of System Configuration 006-002](screenshots/system-config-006-002.png)
 
   5. List your network interface configuration
 ```Bash
@@ -158,6 +158,7 @@ $ sudo systemctl enable nscd
 ```
 ![Image of System Configuration 012-002](screenshots/system-config-012-002.png)
 ![Image of System Configuration 012-003](screenshots/system-config-012-003.png)
+
   8. Show the ntpd service is running
 ```Bash
 $ sudo systemctl status ntp
